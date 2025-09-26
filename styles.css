@@ -1,18 +1,92 @@
 
 body{
-
+  
     background-image: url("images/galaxy.jpg");
     color:white;
-    background-size: cover;
+    background: scroll no-repeat cover;
+}
+
+.taskbar{
+    position: relative;
+    width:80%;
+    margin: 20px 10%;
+    padding: 15px 10px;
+    background-color: rgba(0, 0, 0, 0.2); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border:1px solid #ccc;
 
 }
 
 
 .container {
-    max-width: 800px;
+    width: 500px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2); 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border:1px solid #ccc;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr auto;
+}
+
+a:link{
+    color:white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: pink;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+.icon-link {
+
+    position:relative;
+    padding: 0px 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    transition: background-color 0.3s ease; /* Adds a smooth transition on hover */
+    align-items: right;
+}
+
+.icon-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.invert-icon{
+    filter: invert(1); /* Inverts the icon color to white */
+}
+.connect-wrapper {
+    align-items: center;
+    position: absolute;
+    bottom: auto;
+    width: 80%;
+    padding: 0px 10px;
+    margin: 30px 10%;
+    background-color: rgba(0, 0, 0, 0.2); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border:1px solid #ccc;
+    bottom:0;
+
+}
+.item-in{
+   float:right;
+  
 }
