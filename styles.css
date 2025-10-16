@@ -4,8 +4,19 @@ body{
     background-image: url("images/galaxy.jpg");
     color:white;
     background: scroll no-repeat cover;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
-
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: -1;
+}
+body.loaded {
+  opacity: 1;
+}
 .taskbar{
     position: relative;
     width:80%;
@@ -61,13 +72,17 @@ a:visited {
     padding: 0px 5px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 24px;
-    transition: background-color 0.3s ease; /* Adds a smooth transition on hover */
+    transition: background-color 0.2s ease; /* Adds a smooth transition on hover */
     align-items: right;
 }
 
 .icon-link:hover {
     background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.5);
+
 }
+
+
 
 .invert-icon{
     filter: invert(1); /* Inverts the icon color to white */
@@ -90,3 +105,23 @@ a:visited {
    float:right;
   
 }
+*{
+    cursor: none !important;
+  }
+  
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: cyan;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    
+  }
+  
+      
+
+  
